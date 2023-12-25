@@ -8,5 +8,5 @@ class Corpus:
     def emails(self):
         for filename in os.listdir(self.path):
             if not filename.startswith('!'):
-                with open(os.path.join(self.path, filename), 'r', encoding='utf-8') as f:
-                    yield filename, f.read()
+                with open(os.path.join(self.path, filename), 'r', encoding='UTF-8') as file:
+                    yield filename, file.read()
