@@ -9,5 +9,5 @@ def read_classification_from_file(filename):
 
 def write_dict_to_file(file, dictionary):
     with open(file, 'w', encoding='UTF-8') as file:
-        for key, value in dictionary.items():
-            file.write(f"{key} {value}\n")
+        for key in dictionary:
+            file.write(f"{key} {dictionary[key]}\n")
