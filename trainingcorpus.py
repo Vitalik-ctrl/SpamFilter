@@ -11,9 +11,9 @@ class TrainingCorpus(Corpus):
     def spams(self):
         for email in self.emails():
             if self.classifications[email[0]] == 'SPAM':
-                yield email
+                yield email[1]
                 
     def hams(self):
         for email in self.emails():
             if self.classifications[email[0]] == 'OK':
-                yield email
+                yield email[1]
