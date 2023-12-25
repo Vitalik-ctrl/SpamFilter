@@ -1,2 +1,2 @@
 # SpamFilter
-CTU Prgaue 
+CTU Prague project for Game theory subject - Spam filter
