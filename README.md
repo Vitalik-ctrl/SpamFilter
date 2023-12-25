@@ -1,0 +1,2 @@
+# SpamFilter
+CTU Prgaue 
