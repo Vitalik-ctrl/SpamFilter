@@ -23,13 +23,13 @@ class RelativeCountFilter(BaseFilter):
         self.ham_count = corpus.count_ham()
         self.ratio = self.spam_count / (self.spam_count + self.ham_count)
 
-        for _, spam_content in corpus.spams():
+        for spam_content in corpus.spams():
             for word in spam_content.split():
                 if word not in self.spam_words:
                     self.spam_words[word] = 0
                 self.spam_words[word] += self.ratio
 
-        for _, ham_content in corpus.hams():
+        for ham_content in corpus.hams():
             for word in ham_content.split():
                 if word in self.spam_words:
                     self.spam_words[word] -= 1000 * self.ratio
